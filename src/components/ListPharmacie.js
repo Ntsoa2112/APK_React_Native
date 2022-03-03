@@ -136,23 +136,7 @@ const styles = StyleSheet.create({
   Icon:{
     paddingTop:22
   },
-  location:{
-    position:'absolute',
-    zIndex:111111,
-    width:50,
-    height:50,
-    borderRadius:25,
-    backgroundColor:'#058B12',
-    top:windowHeight/1.5,
-    left:windowWidth/1.3,
-    textAlign:'center',
-    padding:10,
-    paddingLeft:15,
-    shadowOffset: {width: 2, height: 2},
-    shadowOpacity: 0.8,
-    shadowRadius:3,
-    elevation: 9
-  }
+
   
 })
 const mapStateToProps = (state) => {

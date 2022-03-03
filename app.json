@@ -29,7 +29,7 @@
           "apiKey": ""
         }
       },
-      "package": ""
+      "package": "com.example.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"

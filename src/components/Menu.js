@@ -27,7 +27,7 @@ class Menu extends React.Component {
         <Tab.Screen name="Acueill" component={Home}
           options={{
             tabBarLabel: 'Acueill',
-            tabBarColor:'#058B12',
+            tabBarColor:'#5B2C6F',
             tabBarIcon: ({ color="white" }) => (
               <Ionicons name="home-outline" color={color} size={26} />
             ),
@@ -37,7 +37,7 @@ class Menu extends React.Component {
           options={{
           tabBarLabel: 'Notifications',
           tabBarBadge: 1,
-          tabBarColor:'#058B12',
+          tabBarColor:'#5B2C6F',
           tabBarIcon: ({ color="white" }) => (
             <Ionicons name="notifications-outline" color={color} size={26} />
           ),
@@ -46,7 +46,7 @@ class Menu extends React.Component {
         <Tab.Screen name="Setting" component={Setting}
           options={{
               tabBarLabel: 'Paramètres',
-              tabBarColor:'#058B12',
+              tabBarColor:'#5B2C6F',
               tabBarIcon: ({ color="white" }) => (
                 <Ionicons name="settings-outline" color={color} size={26} />
               ),
@@ -55,7 +55,7 @@ class Menu extends React.Component {
        <Tab.Screen name="Login" component={Login}
           options={{
               tabBarLabel: 'Login',
-              tabBarColor:'#058B12',
+              tabBarColor:'#5B2C6F',
               tabBarIcon: ({ color="white" }) => (
                 <Feather name="user" color={color} size={26} />
               ),

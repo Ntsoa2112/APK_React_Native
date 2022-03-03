@@ -45,7 +45,7 @@ class Home extends React.Component {
             <View style={styles.head_logo}>
               <Image
                 style={styles.image_logo}
-                source={require('../../assets/tomady.png')}
+                source={require('../../assets/logo.png')}
               />
               <Text style={styles.title_logo}>{langue[lang].bienvenue}</Text>
             </View>
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   },
   head:{
     height:130,
-    backgroundColor:'#058B12'
+    backgroundColor:'#5B2C6F'
   },
   TextInput:{
     width:320,
