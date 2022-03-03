@@ -9,11 +9,9 @@ class ItemPhar extends React.Component {
     this.state = {
       
     }
-
   }
   
  //star-outline
-
   render() {
     const {pharmacie,navigation} = this.props
     const star =[1,2,3,4,5]

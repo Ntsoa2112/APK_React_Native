@@ -38,19 +38,42 @@ class DetailPharmacie extends React.Component {
   }
 
   getDataFromApi =()=>{
+    let donnee1 = [{"id":1,"nom":" Pharmacie Rakotoarivony","lieu":"Analakely",
+    "image":"https://rci.fm/sites/default/files/2021-04/pharmacie.jpg","date_created":"2021-11-09T08:03:11.000Z",
+    "date_updated":"2021-11-11T18:15:12.000Z","longitude":"47.525228882622166","latitude":"-18.90633554528606",
+    "parking":"001","bus":"192,145,178,156","arret":"Galaxy","notation":4,"contact":"0340921107"},
+    [{"id":1,"id_pharmacie":1,"id_user":1,"commentaire":"Un très bon qualité de service avec des prix totalement raisonnable à mon goût.","date_created":"2021-11-11T14:43:52.000Z",
+    "nom":"RAJAONARIVONY ","prenom":"Rivo Lalaina",
+    "image":"https://www.missnumerique.com/blog/wp-content/uploads/photo-de-profil-pour-les-reseaux-sociaux-joseph-gonzalez.jpg"},
+    {"id":59,"id_pharmacie":1,"id_user":2,"commentaire":"J'acheter la même chose dans ce pharmacie et l'autre juste à côté. Mais il propose la même produit en 10% moins chères.","date_created":"2021-11-11T14:49:30.000Z","nom":"MANAMBINTSOA","prenom":"Mihaingoherilanto","image":"https://www.unicef.org/madagascar/sites/unicef.org.madagascar/files/2020-06/UNICEF%20Madagascar%20Supporter%202.jpeg"},{"id":56,"id_pharmacie":1,"id_user":3,
+    "commentaire":"Nisy fotoana zah nividy Sirop fa 15 min d'attente.Ela loatra le service",
+    "date_created":"2021-11-11T14:44:48.000Z","nom":"TAFITASOA","prenom":"Fabrice",
+    "image":"https://i2.wp.com/www.agencemalagasydepresse.com/wp-content/uploads/2020/02/stephane.jpg"}]];
+    let donnee2 = [{"id":2,"nom":"Pharmacie de l'Ocean Indien","lieu":"Analakely",
+    "image":"https://fr.madayp.com/img/mg/g/1429174672-55-pharmacie-ocean-indien.jpg",
+    "date_created":"2021-11-09T08:03:43.000Z","date_updated":"2021-11-11T18:15:18.000Z",
+    "longitude":"47.522416220844356","latitude":"-18.90530173538965","parking":"000",
+    "bus":"192,145,178,156","arret":"Galaxy","notation":5,"contact":"0331235173"},
+    [{"id":61,"id_pharmacie":2,"id_user":1,"commentaire":"Milay be indray Io pharmacie io sady tsra service",
+    "date_created":"2021-11-11T15:44:18.000Z","nom":"RAJAONARIVONY ","prenom":"Rivo Lalaina",
+    "image":"https://www.missnumerique.com/blog/wp-content/uploads/photo-de-profil-pour-les-reseaux-sociaux-joseph-gonzalez.jpg"}]]
     console.log(this.props.route.params.id)
       if(this.props.route.params.id){
         let id = this.props.route.params.id
-        axios.get(http + '/pharmacie/get/' + id)
-        .then((res)=>{
-            if(res.data){
-                this.setState({
-                    items:res.data,
-                    isLoading:false,
-                    commits:res.data[1]
-                })
-            }
+        if(id ==1 ){
+          this.setState({
+            items:donnee1,
+            isLoading:false,
+            commits:donnee1[1]
         })
+        }
+        else if (id ==2){
+          this.setState({
+            items:donnee2,
+            isLoading:false,
+            commits:donnee2[1]
+        })
+        }
       }
     
   }

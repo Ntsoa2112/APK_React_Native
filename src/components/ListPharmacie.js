@@ -21,6 +21,7 @@ class Search extends React.Component {
       
     }
   }
+  
   componentDidMount(){
     const extractUrl = this.props.route.params.routeName ? this.props.route.params.routeName : ''  
     this.getItems(extractUrl)
@@ -34,22 +35,25 @@ class Search extends React.Component {
   
   getItems =(condition)=>{
     if(condition){
-      const extractUrl = this.props.route.params.routeName == 'Pharmacie'?'pharmacie':'medcin'
-      console.log(extractUrl)
-      axios.get(http + '/' + extractUrl + '/getList')
-      .then((res)=>{
-        if(res.data){
-          this.setState({
-            items:res.data, 
-            isLoading:false
-          })
-        }
+      let donnee = [
+        {"id":1,"nom":" Pharmacie Rakotoarivony",
+        "lieu":"Analakely","image":"https://rci.fm/sites/default/files/2021-04/pharmacie.jpg",
+        "date_created":"2021-11-09T08:03:11.000Z","date_updated":"2021-11-11T18:15:12.000Z",
+        "longitude":"47.525228882622166","latitude":"-18.90633554528606",
+        "parking":"001","bus":"192,145,178,156","arret":"Galaxy","notation":4,"contact":"0340921107"},
+        {"id":2,"nom":"Pharmacie de l'Ocean Indien","lieu":"Analakely",
+        "image":"https://fr.madayp.com/img/mg/g/1429174672-55-pharmacie-ocean-indien.jpg",
+        "date_created":"2021-11-09T08:03:43.000Z","date_updated":"2021-11-11T18:15:18.000Z",
+        "longitude":"47.522416220844356","latitude":"-18.90530173538965","parking":"000",
+        "bus":"192,145,178,156","arret":"Galaxy","notation":5,"contact":"0331235173"}
+      ]
+      this.setState({
+        items:donnee, 
+        isLoading:false
       })
-      .catch((error)=>console.log(error))
     }
   }
   sendSearch(condition){
-
     if(condition){
       const extractUrl = this.props.route.params.routeName == 'Pharmacie'?'pharmacie':'medcin'
       this.setState({
